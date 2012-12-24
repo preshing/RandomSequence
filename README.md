@@ -1,4 +1,4 @@
-This C++ project implements a random number generator which outputs a unique 32-bit integer each time it's called, and verifies that the first 2<sup>32</sup> integers returns really are unique.
+This C++ project implements a random number generator which outputs a unique 32-bit integer each time it's called, and verifies that the first 2<sup>32</sup> integers returns really are unique. The algorithm is described in the blog post [How to Generate a Sequence of Unique Random Integers](http://preshing.com/20121224/how-to-generate-a-sequence-of-unique-random-integers).
 
 [CMake](http://www.cmake.org/) is required to build.
 
