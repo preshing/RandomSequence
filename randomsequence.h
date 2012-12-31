@@ -8,7 +8,7 @@ private:
     unsigned int m_index;
     unsigned int m_intermediateOffset;
 
-    static unsigned int shuffleQPR(unsigned int x)
+    static unsigned int permuteQPR(unsigned int x)
     {
         static const unsigned int prime = 4294967291u;
         if (x >= prime)
@@ -20,13 +20,13 @@ private:
 public:
     RandomSequenceOfUnique(unsigned int seedBase, unsigned int seedOffset)
     {
-        m_index = shuffleQPR(shuffleQPR(seedBase) + 0x682f0161);
-        m_intermediateOffset = shuffleQPR(shuffleQPR(seedOffset) + 0x46790905);
+        m_index = permuteQPR(permuteQPR(seedBase) + 0x682f0161);
+        m_intermediateOffset = permuteQPR(permuteQPR(seedOffset) + 0x46790905);
     }
 
     unsigned int next()
     {
-        return shuffleQPR((shuffleQPR(m_index++) + m_intermediateOffset) ^ 0x5bf03635);
+        return permuteQPR((permuteQPR(m_index++) + m_intermediateOffset) ^ 0x5bf03635);
     }
 };
 
