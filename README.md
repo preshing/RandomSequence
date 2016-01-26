@@ -10,3 +10,7 @@ To run the test on Windows:
 * `cmake ..` (You can optionally specify a toolchain using CMake's `-G` argument.)
 * `cmake --build . --config Release`
 * `ctest .`
+
+## LICENSE
+
+Released to the [public domain](http://unlicense.org).
